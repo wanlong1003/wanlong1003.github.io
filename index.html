@@ -37,6 +37,12 @@
 </head>
 <body>
     <p class="text">临时停靠 请多关照</p>
-    <a class="call" href="tel:15398015980">呼叫车主</a>
+    <a id="call" class="call">呼叫车主</a>
+
+    <script>
+        var url = new URL(window.location.href);
+        var tel = url.searchParams.get("tel")
+        document.getElementById("call").href = "tel:"+tel;
+    </script>
 </body>
 </html>
